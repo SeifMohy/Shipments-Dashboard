@@ -11,6 +11,7 @@ namespace Shipments.Models
         public int? ShipperReference { get; set; }
         public int? ShipmentNumb { get; set; }
         public bool Checked { get; set; } = false;
+        // [InverseProperty("OrderLines")]
         public List<OrderLine>? OrderLines { get; set; }
         public string? ShipFrom { get; set; }
         public string? ShipTo { get; set; }

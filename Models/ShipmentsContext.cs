@@ -11,12 +11,15 @@ namespace Shipments.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<OrderLine>()
-                .HasOne(b => b.Shipment)
-                .WithMany(p => p.OrderLines)
-                .HasForeignKey(p => p.ShipmentId)
-                .HasPrincipalKey(c => c.OrderId);
-
+            modelBuilder.Entity<Shipment>()
+                .HasMany(b => b.OrderLines)
+                .WithOne().HasForeignKey(p => p.OrderLineId); ;
+            // .WithMany(p => p.OrderLines)
+            // .HasForeignKey(p => p.ShipmentId)
+            // .HasPrincipalKey(c => c.OrderId);
+            // modelBuilder.Entity<Shipment>()
+            //     .Navigation(b => b.OrderLines)
+            //     .UsePropertyAccessMode(PropertyAccessMode.Property);
         }
         public ShipmentsContext(DbContextOptions<ShipmentsContext> options)
             : base(options)
