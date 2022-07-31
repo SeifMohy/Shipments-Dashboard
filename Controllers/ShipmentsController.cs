@@ -33,7 +33,7 @@ namespace Shipments.Controllers
             {
                 Id = 1,
                 OrderDate = "29/07/2022",
-                Status = "Entered",
+                Status = "Shipped",
                 Checked = false,
                 ShipFrom = new Address
                 {
@@ -76,7 +76,7 @@ namespace Shipments.Controllers
             {
                 Id = 2,
                 OrderDate = "30/07/2022",
-                Status = "Entered",
+                Status = "Delivered",
                 Checked = false,
                 ShipFrom = new Address
                 {
@@ -119,7 +119,7 @@ namespace Shipments.Controllers
             {
                 Id = 3,
                 OrderDate = "31/07/2022",
-                Status = "Entered",
+                Status = "Invoiced",
                 Checked = false,
                 ShipFrom = new Address
                 {
